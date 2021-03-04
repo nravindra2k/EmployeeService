@@ -1,0 +1,26 @@
+#%RAML 1.0
+baseUri: https://anypoint.mulesoft.com/mocking/api/v1/links/f6092c4f-8c67-4014-b1c5-da37580058a3/ # 
+title: employee-service
+description: Service will processes employee HR services.
+/employee:
+  description: processes employee data requests
+  post:
+    body:
+      application/json:
+        example: |
+          {
+            "employee":
+              
+              {
+                "id":"A007","first_name":"Jan","last_name":"Doe"
+              }
+          }
+    responses:
+      201 :
+        body:
+          text/plain:
+            example:
+              Jan Doe employee profile is created in HRMS System
+
+              
+            
